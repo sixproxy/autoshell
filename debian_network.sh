@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# 获取当前系统的 IP 地址、网关和 DNS
+CURRENT_IP=$(ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')
+CURRENT_GATEWAY=$(ip route show default | awk '{print $3}')
+CURRENT_DNS=$(cat /etc/resolv.conf | grep 'nameserver' | awk '{print $2}')
+
+echo "当前 IP 地址: $CURRENT_IP"
+echo "当前网关地址: $CURRENT_GATEWAY"
+echo "当前 DNS 服务器: $CURRENT_DNS"
+
 # 获取网卡名称
 INTERFACE=$(ip -br link show | awk '{print $1}' | grep -v "lo" | head -n 1)
 [ -z "$INTERFACE" ] && { echo "未找到网络接口，程序退出。"; exit 1; }
