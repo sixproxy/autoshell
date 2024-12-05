@@ -36,7 +36,6 @@ iface $INTERFACE inet static
     address $IP_ADDRESS
     netmask 255.255.255.0
     gateway $GATEWAY
-    dns-nameservers $DNS_SERVERS
 EOL
 
 # 更新 resolv.conf 文件
