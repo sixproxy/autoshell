@@ -2,5 +2,5 @@
 
 Debian设置网络：
 ```
-bash <(curl -sL "https://raw.githubusercontent.com/qichiyuhub/autoshell/refs/heads/master/debian_network.sh")
+bash <(curl -sL "https://raw.githubusercontent.com/qichiyuhub/autoshell/refs/heads/main/debian_network.sh")
 ```
