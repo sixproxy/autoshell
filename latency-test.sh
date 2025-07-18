@@ -11,6 +11,7 @@ CONNECT_TIMEOUT="10"
 PREDEFINED_TARGETS=(
     "www.google.com"
     "www.youtube.com"
+    "www.googlevideo.com"
     "www.cloudflare.com"
     "www.github.com"
     "www.baidu.com"
